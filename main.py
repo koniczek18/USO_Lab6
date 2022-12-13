@@ -51,6 +51,7 @@ def zadanie1(active):
         plt.legend()
         print('Base system J=', baseSystem[-1, 2])
         print('Modified system J=', modifiedSystem[-1, 2])
+        print('Close all plots to show next task if active')
         plt.show()
 
 
@@ -103,6 +104,7 @@ def zadanie2(active):
         x_t1=np.array([[SystemSym[-1,0]],[SystemSym[-1,1]]])
         J=x_t1.T@S@x_t1+SystemSym[-1, 2]
         print('Modified System with P(t) J=', J[0,0])
+        print('Close all plots to show next task if active')
         plt.show()
 
 
@@ -151,9 +153,10 @@ def zadanie3(active):
         plt.plot(t, stabiliseSytsemInfitite[:, 0], label='x1')
         plt.plot(t, stabiliseSytsemInfitite[:, 1], label='x2')
         plt.legend()
+        print('Close all plots to show next task if active')
         plt.show()
 
 if __name__ == '__main__':
-    zadanie1(False)
-    zadanie2(False)
+    zadanie1(True)
+    zadanie2(True)
     zadanie3(True)
